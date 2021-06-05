@@ -1,4 +1,5 @@
 
+
 #!/bin/bash
 wage=0
 for((i=1;i<21;i++))
@@ -19,3 +20,7 @@ fi
 done
 
 echo "WAGE: "$wage
+
+
+
+
