@@ -1,29 +1,19 @@
+
 #!/bin/bash
-#UC_1
+wage=0
+for((i=1;i<21;i++))
+do
 attend=$((RANDOM%2))
-case $attend in
-   1)
-      echo 'Present'
-	;;
-   2)
-      echo 'Absent'
-	;;
-esac
+if [ $attend -eq 1 ]
+then
+   time=$((RANDOM%2))
+   if [ $time -eq 1 ]
+   then
+      wage=$((wage+8*20))
+   else
+      wage=$((wage+16*20))
+   fi
+fi
+done
 
-#UC2
-day=$((1+RANDOM%8))
-wage=$((20*day))
-
-#UC3
-time=$((RANDOM%2))
-case $time in
-   1)
-      wage_pt=8*20
-   ;;
-   2)
-      wage_ft=16*20
-   ;;
-esac
-echo 'wage = '$wage
-
-
+echo "WAGE: "$wage
