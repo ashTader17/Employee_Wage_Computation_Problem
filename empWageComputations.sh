@@ -1,14 +1,16 @@
+
 #!/bin/bash
-echo "WELCOME"
 
 #UC_1
 attend=$((RANDOM%2))
-if [ $attend -eq 1 ]
-then
+case $attend in
+   1)
       echo 'Present'
-else
+        ;;
+   2)
       echo 'Absent'
-fi
+        ;;
+esac
 
 #UC2
 day=$((1+RANDOM%8))
@@ -16,13 +18,12 @@ wage=$((20*day))
 
 #UC3
 time=$((RANDOM%2))
-if [ $attend -eq 1 ]
-then
+case $time in
+   1)
       wage_pt=8*20
-else
+   ;;
+   2)
       wage_ft=16*20
-
-fi
-
-
-
+   ;;
+esac
+echo 'wage = '$wage
