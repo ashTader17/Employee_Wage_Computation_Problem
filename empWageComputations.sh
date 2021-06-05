@@ -1,5 +1,6 @@
 #!/bin/bash
 declare -a dailyWage
+declare -a day
 wage=0
 for((i=1;i<21;i++))
 do
@@ -15,6 +16,7 @@ do
    fi
 dailyWage[$i]=$wage
 total=$((wage+total))
+day[$i]=${$wage}
 done
 
 echo "TOTAL WAGE: "$total
